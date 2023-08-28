@@ -12,43 +12,36 @@
 
 * Usage
 
-*Project Status
+* Project Status
 
 * Room for Improvement
 
 * Acknowledgement
 
-General Info
+# General Info
+
 Financial inclusion is a critical aspect of economic development, and this project focuses on assessing the state of financial inclusion in Africa. Through data analysis and machine learning, we aim to gain insights into factors affecting financial inclusion and propose solutions to improve access to financial services across the continent.
 
-Technologies Used
-Python
-Pandas
-NumPy
-Scikit-Learn
-TensorFlow/Keras
-Matplotlib
-Jupyter Notebook
-Features
-Data collection and preprocessing.
-Exploratory data analysis (EDA).
-Machine learning models for predicting financial inclusion.
-Data visualization.
-Evaluation metrics for model performance.
-Setup
-To run this project locally, follow these steps:
+# Technologies Used
 
-Clone the repository to your local machine:
+* Python
 
-bash
-Copy code
-git clone https://github.com/your-username/financial-inclusion.git
-Install the required Python packages:
+* Pandas
 
-bash
-Copy code
-pip install -r requirements.txt
-Open and run the Jupyter Notebook files to explore the analysis and models.
+* NumPy
+
+* Scikit-Learn
+
+* TensorFlow/Keras
+
+* Matplotlib
+
+* Google Colab
+
+# Features
+country,year,uniqueid ,bank_account,location_type,cellphone_access,household_size,age_of_respondent,gender_of_respondent, relationship_with_head,marital_status,education_level,job_type
+
+# Setup
 
 Usage
 This project can be used for:
