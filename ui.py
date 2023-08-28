@@ -3,7 +3,7 @@ import pickle
 
 #Function to load the selected model
 def load_model(model_name):
-    model_path = f'C:/Users/hlala/OneDrive/Desktop/Financial Inclusion in Africa/Eddie_Financial_Inclusion_in_Africa-7/{model_name}.pkl'
+    model_path = f'{model_name}.pkl'
     with open(model_path, 'rb') as file:
         model = pickle.load(file)
     return model
@@ -16,7 +16,7 @@ def main():
     page_bg_img = '''
     <style>
     .stApp {
-        background-image: url('data:image/png;base64,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');
+        background-image: url('');
         background-size: cover;
     }
     </style>
@@ -28,7 +28,7 @@ def main():
     st.subheader('Welcome! Select a model and input features for prediction.')
 
     # Dropdown to select the model
-    model_options = ['XGBClassifier',  'RandomForest', 'DecisionTree']
+    model_options = ['XGBClassifier']
     selected_model = st.selectbox('Select Model', model_options)  
 
     # Load the selected model
@@ -36,10 +36,32 @@ def main():
 
     # User input for features
     st.header('Feature Input')
-    feature1 = st.number_input('location_type', value=0)
+    
+    location_Type={0:'Urban',1: 'Rural'}
+    def format_func(option):
+        return location_Type[option]
+    feature1 = st.selectbox("Choose your Location Type", options=list(location_Type.keys()), format_func=format_func)
+
+    # cellphone_access={0:'No',1: 'Yes'}
+    # def format_func(option):
+    #     return cellphone_access[option]
+    # feature2 = st.selectbox("cellphone_access", options=list(cellphone_access.keys()), format_func=format_func)
+
+
     feature2 = st.number_input('age_of_respondent', value=0)
-    feature3 = st.number_input('education_level', value=0)
-    feature4 = st.number_input('job_type', value=0)
+
+
+    education_level={0:'Secondary education',1: 'Vocational/Specialised training',2: 'No formal education', 3: 'Primary education',4: 'Other/Dont know/RTA',5: 'Tertiary education'}
+    def format_func(option):
+        return education_level[option]
+    feature3 = st.selectbox("Choose your education_level", options=list(education_level.keys()), format_func=format_func)
+
+   
+    Job_type={0:'Formally employed Government', 1: 'Formally employed Private',2: 'Remittance Dependent', 3: 'Self employed', 4: 'Informally employed',5: 'Farming and Fishing', 6: 'Government Dependent',7: 'Other Income',8: 'Dont Know/Refuse to answer', 9: 'No Income'}
+    def format_func(option):
+        return Job_type[option]
+    feature4 = st.selectbox("Choose your Job_type", options=list(Job_type.keys()), format_func=format_func)
+   
  
 
 
@@ -50,7 +72,11 @@ def main():
     if clicked:
         # Perform predictions using the selected model
         prediction = model.predict([[feature1, feature2, feature3, feature4]])
-
+        if prediction[0] == 0:
+            pred="Yes"
+        else:
+            pred="No"
+    
         # Display the prediction result
         st.header('Prediction')
         st.write(f'The prediction result is:  {prediction[0]}')
