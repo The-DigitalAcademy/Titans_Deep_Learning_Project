@@ -63,7 +63,7 @@ This project can be used for:
 
 * Visualizing data and insights for decision-making.
 
-#Project Status
+# Project Status
 
 This project is currently in progress. 
 
