@@ -1,2 +1,6 @@
-xgboost
-scikit-learn
+pandas
+streamlit
+joblib
+tensorflow
+scikit-learn==1.2.2
+numpy
