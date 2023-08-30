@@ -21,25 +21,19 @@ feature3 = st.selectbox("Extracurricular Activities", options=list(Extracurricul
 feature4 = st.number_input('Sleep Hours', value=0)
 feature5 = st.number_input('Sample Question Papers Practiced', value=0)
 
+Button for predictions
+    clicked = st.button('Get Predictions')
+
+    # Perform predictions when the button is clicked
+    if clicked:
+        # Perform predictions using the selected model
+        prediction = model.predict([[feature1, feature2, feature3, feature4, feature5]])
+
+        # Display the prediction result
+        st.header('Prediction')
+        st.write(f'The prediction result is:  {prediction[0]}')
+
+if name == 'main':
+    main()
 
 
-#  # Prepare the input data for prediction
-input_data = np.array([[feature1, feature2, feature3, feature4, feature5]])
-
-# # Make predictions when a button is clicked
-if st.button("Predict"):
-#     try:
-        
-#         st.write("Input Data:", input_data) 
-
-#     # Use the loaded model to make predictions
-    prediction = model.predict(input_data)
-
-#         st.write("Raw Prediction:", prediction)  # Log the raw prediction
-
-#     # Display the prediction
-    st.write(f"Student score: {prediction[0, 0]}")
-except Exception as e:
-    
-    st.error("An error occurred during prediction.")
-    st.exception(e)  # Log the exception details
