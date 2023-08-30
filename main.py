@@ -14,10 +14,10 @@ st.header('Feature Input')
 feature1 = st.number_input('Hours Studied', value=0)
 feature2 = st.number_input('Previous Scores', value=0)
 
-Extracurricular Activities={0:'No',1: 'Yes'}
+Extracurricular_Activities={0:'No',1: 'Yes'}
 def format_func(option):
-    return Extracurricular Activities[option]
-feature3 = st.selectbox("Extracurricular Activities", options=list(Extracurricular Activities.keys()), format_func=format_func)
+    return Extracurricular_Activities[option]
+feature3 = st.selectbox("Extracurricular Activities", options=list(Extracurricular_Activities.keys()), format_func=format_func)
 feature4 = st.number_input('Sleep Hours', value=0)
 feature5 = st.number_input('Sample Question Papers Practiced', value=0)
 
