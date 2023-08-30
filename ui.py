@@ -1,38 +1,12 @@
 import streamlit as st
-import pickle
+import tensorflow as tf
+import numpy as np
+import pandas as pd
 
-#Function to load the selected model
-def load_model(model_name):
-    model_path = f'{model_name}.pkl'
-    with open(model_path, 'rb') as file:
-        model = pickle.load(file)
-    return model
+# Load the pre-trained model
+model = tf.keras.models.load_model('model.h5')
 
-def main():
-  # Title of the web app
-    st.title('Financial Inclusion In Africa')
-
-    # Set custom CSS for the background image
-    page_bg_img = '''
-    <style>
-    .stApp {
-        background-image: url('');
-        background-size: cover;
-    }
-    </style>
-    '''
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    
-    
-    # Subheader
-    st.subheader('Welcome! Select a model and input features for prediction.')
-
-    # Dropdown to select the model
-    model_options = ['XGBClassifier']
-    selected_model = st.selectbox('Select Model', model_options)  
-
-    # Load the selected model
-    model = load_model(selected_model)
+st.title("Financial Inclusion In Africa")
 
     # User input for features
     st.header('Feature Input')
