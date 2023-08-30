@@ -14,7 +14,7 @@ st.header('Feature Input')
 cellphone_access={0:'No',1: 'Yes'}
 def format_func(option):
     return cellphone_access[option]
-feature1 = st.selectbox("cellphone_access", options=list(location_Type.keys()), format_func=format_func)
+feature1 = st.selectbox("cellphone_access", options=list(cellphone_access.keys()), format_func=format_func)
 
 
 feature2 = st.number_input('age_of_respondent', value=0)
@@ -22,7 +22,7 @@ feature2 = st.number_input('age_of_respondent', value=0)
 gender_of_respondent={0:'Female',1: 'Male'}
 def format_func(option):
     return gender_of_respondent[option]
-feature3 = st.selectbox("gender_of_respondent", options=list(location_Type.keys()), format_func=format_func)
+feature3 = st.selectbox("gender_of_respondent", options=list(gender_of_respondent.keys()), format_func=format_func)
 
 education_level={0:'Secondary education',1: 'Vocational/Specialised training',2: 'No formal education', 3: 'Primary education',4: 'Other/Dont know/RTA',5: 'Tertiary education'}
 def format_func(option):
