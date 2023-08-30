@@ -25,13 +25,13 @@ feature5 = st.number_input('Sample Question Papers Practiced', value=0)
     clicked = st.button('Get Predictions')
 
     # Perform predictions when the button is clicked
-    if clicked:
+if clicked:
         # Perform predictions using the selected model
-        prediction = model.predict([[feature1, feature2, feature3, feature4, feature5]])
+    prediction = model.predict([[feature1, feature2, feature3, feature4, feature5]])
 
         # Display the prediction result
-        st.header('Prediction')
-        st.write(f'The prediction result is:  {prediction[0]}')
+    st.header('Prediction')
+    st.write(f'The prediction result is:  {prediction[0]}')
 
 if name == 'main':
     main()
