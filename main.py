@@ -28,7 +28,7 @@ input_data = np.array([[feature1, feature2, feature3, feature4, feature5]])
 
 # Make predictions when a button is clicked
 if st.button("Predict"):
-try:
+    try:
     st.write("Input Data:", input_data)  # Log the input data
 
     # Use the loaded model to make predictions
