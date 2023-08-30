@@ -33,7 +33,7 @@ input_data = np.array([[feature1, feature2, feature3, feature4, feature5]])
 #         st.write("Input Data:", input_data) 
 
 #     # Use the loaded model to make predictions
-#         prediction = model.predict(input_data)
+       prediction = model.predict(input_data)
 
 #         st.write("Raw Prediction:", prediction)  # Log the raw prediction
 
