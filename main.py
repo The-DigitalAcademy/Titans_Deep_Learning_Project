@@ -22,7 +22,7 @@ feature4 = st.number_input('Sleep Hours', value=0)
 feature5 = st.number_input('Sample Question Papers Practiced', value=0)
 
 #Button for predictions
-    clicked = st.button('Get Predictions')
+clicked = st.button('Get Predictions')
 
     # Perform predictions when the button is clicked
 if clicked:
