@@ -39,6 +39,7 @@ if st.button("Predict"):
 
     # Display the prediction
     #st.write(f"Bank account Approval Probability: {prediction[0, 0]}")
-except Exception as e:
-    st.error("An error occurred during prediction.")
-    st.exception(e)  # Log the exception details
+    except Exception as e:
+        
+         st.error("An error occurred during prediction.")
+         st.exception(e)  # Log the exception details
