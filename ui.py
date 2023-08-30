@@ -36,21 +36,14 @@ def format_func(option):
 feature5 = st.selectbox("Choose your Job_type", options=list(Job_type.keys()), format_func=format_func)
 
 
- # Prepare the input data for prediction
-input_data = np.array([[feature1, feature2, feature3, feature4, feature5]])
+#Button for predictions
+clicked = st.button('Get Predictions')
 
-# Make predictions when a button is clicked
-if st.button("Predict"):
-    try:
-        st.write("Input Data:", input_data)  # Log the input data
+    # Perform predictions when the button is clicked
+if clicked:
+        # Perform predictions using the selected model
+    prediction = model.predict([[feature1, feature2, feature3, feature4, feature5]])
 
-        # Use the loaded model to make predictions
-        prediction = model.predict(input_data)
-
-        st.write("Raw Prediction:", prediction)  # Log the raw prediction
-
-        # Display the prediction
-        st.write(f"Bank account Approval Probability: {prediction[0, 0]}")
-    except Exception as e:
-        st.error("An error occurred during prediction.")
-        st.exception(e)  # Log the exception details
+        # Display the prediction result
+    st.header('Prediction')
+    st.write(f'The prediction result is: {prediction[0]}')
