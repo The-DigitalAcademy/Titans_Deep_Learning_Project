@@ -31,7 +31,7 @@ if clicked:
 
         # Display the prediction result
     st.header('Prediction')
-    st.write(f'The prediction result is:  {round(prediction[0]}, 1)')
+    st.write(f'The prediction result is: ({prediction[0]})
 
 #if __name__ == '__main__':
     #main()
