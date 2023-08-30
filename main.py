@@ -33,7 +33,7 @@ if clicked:
     st.header('Prediction')
     st.write(f'The prediction result is:  {prediction[0]}')
 
-if __name__ == '__main__':
-    main()
+#if __name__ == '__main__':
+    #main()
 
 
