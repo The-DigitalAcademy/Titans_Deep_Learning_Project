@@ -27,19 +27,19 @@ feature5 = st.number_input('Sample Question Papers Practiced', value=0)
 input_data = np.array([[feature1, feature2, feature3, feature4, feature5]])
 
 # # Make predictions when a button is clicked
-# if st.button("Predict"):
+if st.button("Predict"):
 #     try:
         
 #         st.write("Input Data:", input_data) 
 
 #     # Use the loaded model to make predictions
- prediction = model.predict(input_data)
+    prediction = model.predict(input_data)
 
 #         st.write("Raw Prediction:", prediction)  # Log the raw prediction
 
 #     # Display the prediction
-st.write(f"Student score: {prediction[0, 0]}")
-    except Exception as e:
+    st.write(f"Student score: {prediction[0, 0]}")
+except Exception as e:
     
-     st.error("An error occurred during prediction.")
-     st.exception(e)  # Log the exception details
+    st.error("An error occurred during prediction.")
+    st.exception(e)  # Log the exception details
