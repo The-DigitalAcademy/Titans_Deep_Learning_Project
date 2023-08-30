@@ -38,7 +38,7 @@ if st.button("Predict"):
         st.write("Raw Prediction:", prediction)  # Log the raw prediction
 
     # Display the prediction
-    st.write(f"Bank account Approval Probability: {prediction[0, 0]}")
+    #st.write(f"Bank account Approval Probability: {prediction[0, 0]}")
 except Exception as e:
     st.error("An error occurred during prediction.")
     st.exception(e)  # Log the exception details
