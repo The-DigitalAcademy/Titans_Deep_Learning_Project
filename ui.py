@@ -3,11 +3,6 @@ import tensorflow as tf
 import numpy as np
 import pandas as pd
 
-# Load the pre-trained model
-model = tf.keras.models.load_model('model.h5')
-
-st.title("Financial Inclusion In Africa")
-
 # Mapping for decoding encoded features
 cellphone_access = {0:'No',
                     1: 'Yes'}
