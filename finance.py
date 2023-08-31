@@ -34,7 +34,7 @@ job_type={0:'Formally employed Government', 1: 'Formally employed Private',2: 'R
 def format_func(option):
     return job_type[option]
 feature5 = st.selectbox("Choose your Job_type", options=list(job_type.keys()), format_func=format_func)
-feature6=st.input_number(value=0)
+feature6=st.number_input(value=0)
 
 
 #Button for predictions
