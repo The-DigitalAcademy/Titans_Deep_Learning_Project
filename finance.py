@@ -34,6 +34,7 @@ job_type={0:'Formally employed Government', 1: 'Formally employed Private',2: 'R
 def format_func(option):
     return job_type[option]
 feature5 = st.selectbox("Choose your Job_type", options=list(job_type.keys()), format_func=format_func)
+feature6=st.input_number(
 
 
 #Button for predictions
@@ -42,7 +43,7 @@ clicked = st.button('Get Predictions')
     # Perform predictions when the button is clicked
 if clicked:
         # Perform predictions using the selected model
-    prediction = model.predict([[feature1, feature2, feature3, feature4, feature5]])
+    prediction = model.predict([[feature1, feature2, feature3, feature4, feature5,feature6]])
 
         # Display the prediction result
     st.header('Prediction')
