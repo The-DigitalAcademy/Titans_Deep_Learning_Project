@@ -30,10 +30,10 @@ def format_func(option):
 feature4 = st.selectbox("Choose your education_level", options=list(education_level.keys()), format_func=format_func)
 
 
-Job_type={0:'Formally employed Government', 1: 'Formally employed Private',2: 'Remittance Dependent', 3: 'Self employed', 4: 'Informally employed',5: 'Farming and Fishing', 6: 'Government Dependent',7: 'Other Income',8: 'Dont Know/Refuse to answer', 9: 'No Income'}
+job_type={0:'Formally employed Government', 1: 'Formally employed Private',2: 'Remittance Dependent', 3: 'Self employed', 4: 'Informally employed',5: 'Farming and Fishing', 6: 'Government Dependent',7: 'Other Income',8: 'Dont Know/Refuse to answer', 9: 'No Income'}
 def format_func(option):
-    return Job_type[option]
-feature5 = st.selectbox("Choose your Job_type", options=list(Job_type.keys()), format_func=format_func)
+    return job_type[option]
+feature5 = st.selectbox("Choose your Job_type", options=list(job_type.keys()), format_func=format_func)
 
 
 #Button for predictions
