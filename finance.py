@@ -51,6 +51,10 @@ clicked = st.button('Get Predictions')
 if clicked:
         # Perform predictions using the selected model
     prediction = model.predict([[feature1, feature2, feature3, feature4]])
+    if prediction[0] <= 0.5:
+        ss = "No"
+    elif prediction[0] >= 0.5:
+        ss = "Yes"
 
         # Display the prediction result
     st.header('Prediction')
