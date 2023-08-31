@@ -58,4 +58,4 @@ if clicked:
 
         # Display the prediction result
     st.header('Prediction')
-    st.write(f'The prediction result is: {prediction[ss]}')
+    st.write(f'The prediction result is: {ss}')
